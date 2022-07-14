@@ -1,0 +1,208 @@
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100%;
+    min-width: $min-width;
+    margin: 0;
+    padding: 0;
+    font-family: $Ubuntu-Regular;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $color-smoky-black;
+    background-color: $color-white;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: $Ubuntu-Regular;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    font-size: 1.4rem;
+}
+
+img,
+video {
+    height: 100%;
+    max-width: 100%;
+}
+
+picture {
+    display: flex;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $color-smoky-black;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+input[placeholder] {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .responsive-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+
+    iframe,
+    object,
+    embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+} */
+
+.btn {
+    @include button-reset;
+    padding: 1.4rem 3rem;
+    border-radius: 10px;
+    font-family: $Ubuntu-Regular;
+    transition: all 0.3s ease-in-out;
+
+    &--green {
+        background-color: $color-apple;
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: $container-width;
+    padding: 0 2rem;
+
+    @include breakpoint($mobile-width) {
+
+    }
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.site-content {
+    position: relative;
+    flex: 1 0 auto;
+    background-color: $color-cultured;
+}
+
+.bg-cover {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+._hidden-visible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    margin: -1px;
+    overflow: hidden;
+}
+
+._hidden-mobile {
+    @include breakpoint($mobile-width) {
+        display: none !important;
+    }
+}
+
+._visible-mobile {
+    display: none !important;
+
+    @include breakpoint($mobile-width) {
+        display: block !important;
+    }
+}

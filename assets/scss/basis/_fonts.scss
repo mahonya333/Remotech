@@ -1,0 +1,19 @@
+/*
+    Пример подключения шрифта woff/woff2
+    https://css-tricks.com/snippets/css/using-font-face/
+*/
+
+/*Шрифт Montserrat*/
+
+@include fontFace('Ubuntu-Light', '../../fonts/Ubuntu/Ubuntu-Light', 300);
+@include fontFace('Ubuntu-Regular', '../../fonts/Ubuntu/Ubuntu-Regular', 400);
+@include fontFace('Ubuntu-Medium', '../../fonts/Ubuntu/Ubuntu-Medium', 500);
+@include fontFace('Ubuntu-Bold', '../../fonts/Ubuntu/Ubuntu-Bold', 700);
+
+/*Шрифт Montserrat Italic*/
+
+@include fontFace('Ubuntu-LightItalic', '../../fonts/Ubuntu/Ubuntu-LightItalic', 300, italic);
+@include fontFace('Ubuntu-Italic', '../../fonts/Ubuntu/Ubuntu-Italic', 400, italic);
+@include fontFace('Ubuntu-MediumItalic', '../../fonts/Ubuntu/Ubuntu-MediumItalic', 500, italic);
+@include fontFace('Ubuntu-BoldItalic', '../../fonts/Ubuntu/Ubuntu-BoldItalic', 700, italic);
+

@@ -1,0 +1,45 @@
+//https://www.color-name.com/ генератор названия цвета
+$color-black: #000000;
+$color-white: #ffffff;
+$color-smoky-black: #0D0F0E;
+$color-cultured: #F8F8F8;
+$color-apple: #56B24E;
+
+
+
+$border-color: rgba(102, 102, 102, 0.09);
+
+
+$fonts-sans-serif:  BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol";
+
+$fonts-serif: serif;
+
+
+
+$Ubuntu-Light: "Ubuntu-Light", $fonts-sans-serif;
+$Ubuntu-Regular: "Ubuntu-Regular", $fonts-sans-serif;
+$Ubuntu-Medium: "Ubuntu-Medium", $fonts-sans-serif;
+$Ubuntu-Bold: "Ubuntu-Bold", $fonts-sans-serif;
+
+
+
+
+
+
+$Ubuntu-LightItalic: "Ubuntu-LightItalic", $fonts-sans-serif;
+$Ubuntu-Italic: "Ubuntu-Italic", $fonts-sans-serif;
+$Ubuntu-MediumItalic: "Ubuntu-MediumItalic", $fonts-sans-serif;
+$Ubuntu-BoldItalic: "Ubuntu-BoldItalic", $fonts-sans-serif;
+
+
+
+$container-width: 96rem;
+$min-width: 32rem;
+
+
+$notebook-width: 1366px;
+$laptop-width: 1180px;
+$tablet-width: 1024px;
+$mobile-width: 768px;
+$mobile-width-small: 375px;
