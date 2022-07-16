@@ -1,0 +1,40 @@
+.section {
+    padding-top: 14.5rem;
+    padding-bottom: 5.6rem;  
+    background-color: $color-white;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        font-family: $Gramatika-Black;
+        font-size: 16.8rem;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: rgba(210, 210, 210, 0.34);
+        position: absolute;
+        top: 2rem;
+
+        &--right {
+            right: -2vw;
+        }
+
+        &--left {
+            left: 0;
+        }
+
+        &--center {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-family: $Sk-Modernist-Regular;
+        font-size: 3.2rem;
+        line-height: 1;
+        text-align: center;
+    }
+}

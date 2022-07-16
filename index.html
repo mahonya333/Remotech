@@ -27,7 +27,7 @@
     </style>
     <div class="site-wrapper">
         <div class="site-content">
-            <!--             <header class="header">
+            <header class="header">
                 <div class="container">
                     <div class="header__inner">
                         <a class="logo">
@@ -132,13 +132,16 @@
                         </nav>
                     </div>
                 </div>
-            </header> -->
+            </header>
             <main class="main">
                 <section class="banner">
                     <div class="canvas-container" id="canvas-container">
+                        <iframe
+                            src='https://my.spline.design/bunnycopycopycopycopycopycopy-fa53a5eeda760506608c290c6294d085/'
+                            frameborder='0' width='100%' height='500'></iframe>
                         <canvas id="canvas3d" width="320"></canvas>
                     </div>
-                    <!--                     <div class="container">
+                    <div class="container">
                         <div class="advantages-cards">
                             <div class="advantages-card">
                                 <div class="advantages-card__icon-wrapper">
@@ -179,7 +182,42 @@
                                 </p>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                </section>
+
+                <section class="about section">
+                    <h2 class="section__title section__title--center">About us</h2>
+                    <div class="container">
+                        <h3 class="section__subtitle">Our mission is to help you build your project</h3>
+                    </div>
+                </section>
+
+                <section class="process section">
+                    <h2 class="section__title section__title--right">Process</h2>
+                    <div class="container">
+                        <h3 class="section__subtitle">Our delivery framework</h3>
+                    </div>
+                </section>
+
+                <section class="benefits section">
+                    <h2 class="section__title section__title--left">Benefits</h2>
+                    <div class="container">
+                        <h3 class="section__subtitle">Why should you work with us</h3>
+                    </div>
+                </section>
+
+                <section class="succes section">
+                    <h2 class="section__title section__title--right">Succes</h2>
+                    <div class="container">
+                        <h3 class="section__subtitle">See what our clients say about us</h3>
+                    </div>
+                </section>
+
+                <section class="team section">
+                    <h2 class="section__title section__title--left">Team</h2>
+                    <div class="container">
+                        <h3 class="section__subtitle">Professional ahead of your project</h3>
+                    </div>
                 </section>
             </main>
         </div>
@@ -196,9 +234,9 @@
             const canvas = document.getElementById('canvas3d');
             const app = new Application(canvas);
             var gl = canvas.getContext("webgl2");
-            
+
             canvas.setAttribute('width', innerWidth);
-            canvas.height = 480;
+            canvas.height = 700;
 
 
             app.load('./scene.splinecode');
