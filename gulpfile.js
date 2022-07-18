@@ -13,7 +13,6 @@ const { series, parallel, dest, watch, src } = require("gulp"),
 
 function baseLibCss() {
     return src("node_modules/normalize.css/normalize.css")
-        .pipe(src("node_modules/swiper/swiper-bundle.min.css"))
         .pipe(concatCss("lib.css"))
         .pipe(cleanCSS())
         .pipe(dest("build/base/css"))
@@ -21,13 +20,13 @@ function baseLibCss() {
         .pipe(dest("build/base/css"));
 }
 
-function baseLibJs() {
+/* function baseLibJs() {
     return src("node_modules/swiper/swiper-bundle.min.js")
         .pipe(concat("lib.js"))
         .pipe(dest("build/base/js"))
         .pipe(gzip())
         .pipe(dest("build/base/js"));
-}
+} */
 
 function baseMainCss() {
     return src("assets/scss/basis/base-style.scss")
@@ -63,6 +62,23 @@ function homeMainCss() {
         .pipe(dest("build/home/css"))
         .pipe(gzip())
         .pipe(dest("build/home/css"));
+}
+
+function homeLibCss() {
+    return src("node_modules/swiper/swiper-bundle.min.css")
+        .pipe(concatCss("lib.css"))
+        .pipe(cleanCSS())
+        .pipe(dest("build/home/css"))
+        .pipe(gzip())
+        .pipe(dest("build/home/css"));
+}
+
+function homeLibJs() {
+    return src("node_modules/swiper/swiper-bundle.min.js")
+        .pipe(concat("lib.js"))
+        .pipe(dest("build/home/js"))
+        .pipe(gzip())
+        .pipe(dest("build/home/js"));
 }
 
 function homeMainJs() {
@@ -103,7 +119,7 @@ function watching() {
     watch(["node_modules/**/*"], exports.compilingLibFiles);
 }
 
-exports.compilingLibFiles = parallel(baseLibCss, baseLibJs);
+exports.compilingLibFiles = parallel(baseLibCss, homeLibCss, homeLibJs);
 
 exports.compilingJsFiles = parallel(homeMainJs);
 exports.compilingCssFiles = parallel(baseMainCss, homeMainCss);

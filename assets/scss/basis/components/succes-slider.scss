@@ -1,0 +1,116 @@
+.succes-slider {
+    position: relative;
+    max-width: 67.7rem;
+    margin: 0 auto;
+
+    .swiper-container {
+        overflow: initial;
+    }
+
+    .swiper-wrapper {
+        box-sizing: border-box;
+    }
+
+    .swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+            margin: 0;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 0.8rem;
+        height: 0.8rem;
+        padding: 0;
+        border-radius: 50%;
+        background-color: $color-american-silver;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $color-apple;
+    }
+
+    .swiper-slide-next,
+    .swiper-slide-prev {
+        opacity: 0.3;
+        cursor: pointer;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border: 3px solid $color-cultured;
+        border-radius: 8px;
+        user-select: none;
+        transition: all .3s ease-in-out;
+
+        @include breakpoint($mobile-width) {
+            padding: 1.6rem;
+        }
+    }
+
+    &__item-logo {
+        margin-left: auto;
+
+        @include breakpoint($mobile-width) {
+            margin-left: 0;
+            margin-bottom: 2.1rem;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 2.2rem;
+        font-family: $Ubuntu-Medium;
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: -1px;
+
+        @include breakpoint($mobile-width) {
+            margin-bottom: 1.9rem;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__item-description {
+        flex: 1 0 auto;
+        margin-bottom: 2.4rem;
+        font-size: 1.6rem;
+        line-height: 1.37;
+        color: $color-silver-sand;
+
+        @include breakpoint($mobile-width) {
+            margin-bottom: 1.6rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__item-text {
+        padding: 1.7rem 2rem;
+        border-radius: 6px;
+        font-size: 1.6rem;
+        line-height: 1.37;
+        background-color: $color-cultured;
+
+        @include breakpoint($mobile-width) {
+            padding: 1.6rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 3rem 0;
+
+        @include breakpoint($mobile-width) {
+            padding-top: 1.6rem;
+            padding-bottom: 1.6rem;
+        }
+    }
+}

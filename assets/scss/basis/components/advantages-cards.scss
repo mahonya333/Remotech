@@ -2,4 +2,8 @@
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
+
+    @include breakpoint($mobile-width) {
+        flex-direction: column;
+    }
 }

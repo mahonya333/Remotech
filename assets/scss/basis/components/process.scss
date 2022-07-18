@@ -1,4 +1,164 @@
 .process {
-    padding-top: 14.5rem;
-    padding-bottom: 5.6rem;  
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+
+        @include breakpoint($tablet-width) {
+            grid-gap: 1rem;
+        }
+
+        @include breakpoint($mobile-width) {
+            padding-top: 4rem;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 6rem;
+        }
+    }
+
+    &__box {
+        width: 100%;
+        padding: 1rem;
+
+        @include breakpoint($tablet-width) {
+            padding: 0;
+        }
+
+        &--gray {
+
+            .process__box-title {
+                &::before {
+                    background-color: $color-cultured;
+                }
+            }
+
+            .process__box-item {
+                background-color: $color-cultured;
+            }
+
+            .process__box-item-circle {
+                background-color: $color-black;
+            }
+        }
+
+        &--yellow {
+            .process__box-title {
+                &::before {
+                    background-color: $color-philippine-yellow;
+                }
+            }
+
+            .process__box-item {
+                background-color: $color-philippine-yellow;
+            }
+
+            .process__box-item-circle {
+                background-color: $color-white;
+            }
+
+            .process__box-item-icon {
+                path {
+                    stroke: $color-white;
+                }
+
+                ellipse {
+                    fill: $color-white;
+                }
+            }
+
+            .process__box-item-text {
+                color: $color-white;
+            }
+        }
+
+        &--green {
+            .process__box-title {
+                &::before {
+                    background-color: $color-apple;
+                }
+            }
+
+            .process__box-item {
+                background-color: $color-apple;
+            }
+
+            .process__box-item-circle {
+                background-color: $color-white;
+            }
+
+            .process__box-item-icon {
+                path {
+                    stroke: $color-white;
+                }
+
+                ellipse {
+                    fill: $color-white;
+                }
+            }
+
+            .process__box-item-text {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__box-title {
+        margin-bottom: 3.5rem;
+        padding-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.33;
+        text-align: center;
+        position: relative;
+
+        @include breakpoint($tablet-width) {
+            letter-spacing: -0.07rem;
+        }
+
+        @include breakpoint($mobile-width) {
+            margin-bottom: 1.6rem;
+            letter-spacing: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 0.7rem;
+            border-radius: 6px;
+        }
+    }
+
+    &__box-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+
+    &__box-item {
+        display: flex;
+        padding: 1rem;
+        border-radius: 15px;
+        user-select: none;
+
+        &:hover {
+            .process__box-item-icon {
+                animation-name: rotate;
+            }
+        }
+    }
+
+    &__box-item-icon {
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &__box-item-text {
+        padding-left: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.44;
+    }
 }
+

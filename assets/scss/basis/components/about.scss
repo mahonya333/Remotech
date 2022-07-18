@@ -1,4 +1,20 @@
 .about {
-    padding-top: 14.5rem;
-    padding-bottom: 5.6rem;  
+    &__subtitle-text {
+        max-width: 71.3rem;
+        margin: 0 auto 6rem auto;
+        font-size: 1.6rem;
+        line-height: 1.55;
+        text-align: center;
+        color: $color-taupe-gray;
+    }
+
+    &__cards {
+        display: flex;
+    }
+
+    &__card {
+        padding: 3.3rem 2rem;
+        border-radius: 16px;
+        border: 3px solid $border-color;
+    }
 }

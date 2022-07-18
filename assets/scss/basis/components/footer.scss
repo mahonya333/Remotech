@@ -1,0 +1,62 @@
+.footer {
+    padding: 4.1rem 0 5.5rem;
+
+    
+    @include breakpoint($mobile-width) {
+        padding-top: 3rem;
+        padding-bottom: 4.8rem;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @include breakpoint($mobile-width) {
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+
+    &__copy {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.66;
+        color: $color-philippine-silver;
+    }
+
+    &__list-wrapper {
+        display: flex;
+        gap: 8rem;
+
+        @include breakpoint($mobile-width) {
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+
+        &--contacts {
+            margin-top: 1.9rem;
+            gap: 1.4rem;
+        }
+    }
+
+    &__list-item {
+
+    }
+
+    &__list-link {
+        font-size: 1.3rem;
+
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-apple;
+        }
+    }
+}

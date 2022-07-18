@@ -1,0 +1,13 @@
+.team-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+
+    @include breakpoint($tablet-width) {
+        grid-gap: 1.6rem;
+    }
+
+    @include breakpoint($mobile-width) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

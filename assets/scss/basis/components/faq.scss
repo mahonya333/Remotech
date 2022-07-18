@@ -1,0 +1,67 @@
+.faq {
+    padding-top: 7rem;
+
+    &__items {
+        display: grid;
+        grid-gap: 1.6rem;
+    }
+
+    &__item {
+        padding: 2.4rem;
+        border-radius: 13px;
+        border: 2px solid $border-color;
+        transition: all .3s ease-in-out;
+        user-select: none; 
+        cursor: pointer;
+
+        @include breakpoint($mobile-width) {
+            padding: 1.6rem;
+        }
+
+        &._active {
+
+            .faq__item-content {
+                max-height: 100rem;
+                padding-top: 2.4rem;
+
+                @include breakpoint($mobile-width) {
+                    padding-top: 1.6rem;
+                }
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: 2rem;
+        line-height: 1;
+        position: relative;
+
+        @include breakpoint($mobile-width) {
+            font-size: 1.6rem;
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            content: url(../../img/plus-icon.svg);
+        }
+    }
+
+    &__item-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+    }
+
+    &__item-text {
+        font-size: 1.8rem;
+        line-height: 1.44;
+        color: $color-taupe-gray;
+
+        @include breakpoint($mobile-width) {
+            font-size: 1.4rem;
+        }
+    }
+}
