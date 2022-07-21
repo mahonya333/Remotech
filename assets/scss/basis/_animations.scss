@@ -1,23 +1,70 @@
 @keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-0.1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(0.2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-0.4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(0.4px, 0, 0);
-    }
+
+  10%,
+  90% {
+    transform: translate3d(-0.1px, 0, 0);
   }
+
+  20%,
+  80% {
+    transform: translate3d(0.2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-0.4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0.4px, 0, 0);
+  }
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0);
+  }
+
+  70% {
+    transform: rotate(0.7turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes turnNegative {
+  0% {
+    transform: rotate(0);
+  }
+
+  70% {
+    transform: rotate(-0.7turn);
+  }
+
+  100% {
+    transform: rotate(-1turn);
+  }
+
+/*   @keyframes turnNegative {//3d version from animation
+    0% {
+      transform: rotate3d(0, 0 , 0, 0);
+    }
+  
+    70% {
+      transform: rotate3d(0.5, 0.7 , 0.5, -0.7turn);
+    }
+  
+    100% {
+      transform: rotate3d(0.5, 0.7 , 0.5, -1turn);
+    } */
+}

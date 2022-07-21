@@ -1,15 +1,18 @@
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#faqItems')?.addEventListener('click', function (event) {
-        const target = event.target.closest('.faq__item');
+        const target = event.target.closest('.faq__item-head');
+        const parent = target.closest('.faq__item');
 
-        if (target) {
+        if (parent.classList.contains('_active')) {
+            closeElement(parent);
+        } else {
             closeElements('.faq__item');
-            openElement(target);
+            toggleElement(parent);
         }
     });
 
     const swiper = new Swiper('.succes-slider .swiper-container', {
- /*        loop: true, */
+        /*        loop: true, */
         slidesPerView: 1,
         spaceBetween: 30,
         slideToClickedSlide: true,
@@ -35,10 +38,18 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function closeElement(element) {
+    element.classList.remove("_active");
+}
+
 function closeElements(elements) {
-    document.querySelectorAll(elements).forEach( element =>{
+    document.querySelectorAll(elements).forEach(element => {
         element.classList.remove("_active");
     })
+}
+
+function toggleElement(element) {
+    element.classList.toggle("_active");
 }
 
 function openElement(element) {

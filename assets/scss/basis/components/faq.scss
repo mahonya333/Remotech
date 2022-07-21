@@ -7,52 +7,84 @@
     }
 
     &__item {
-        padding: 2.4rem;
         border-radius: 13px;
         border: 2px solid $border-color;
         transition: all .3s ease-in-out;
         user-select: none; 
-        cursor: pointer;
-
-        @include breakpoint($mobile-width) {
-            padding: 1.6rem;
-        }
+        overflow: hidden;
 
         &._active {
+            .faq__item-sign--vertical {
+                transform: rotate(0);
+            }
 
             .faq__item-content {
                 max-height: 100rem;
-                padding-top: 2.4rem;
+                padding-bottom: 2.4rem;
+                padding-top: 1rem;
 
                 @include breakpoint($mobile-width) {
-                    padding-top: 1.6rem;
+                    padding-bottom: 1.6rem;
+                    padding-top: 0.5rem;
                 }
             }
+        }
+    }
+
+    &__item-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.4rem;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        @include breakpoint($mobile-width) {
+            padding: 1.6rem;
+            font-size: 1.6rem;
+        }
+
+        &:hover {
+            background-color: $color-apple;
         }
     }
 
     &__item-title {
         font-size: 2rem;
         line-height: 1;
-        position: relative;
 
         @include breakpoint($mobile-width) {
             font-size: 1.6rem;
         }
+    }
 
-        &::before {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0;
-            content: url(../../img/plus-icon.svg);
+    &__item-sign-wrapper {
+        width: 1.4rem;
+    }
+
+    &__item-sign {
+        width: 1.4rem;
+        height: 0.25rem;
+        background-color: $color-american-silver;
+        position: absolute;
+        transition: all .3s ease-in-out;
+
+        &--vertical {
+            transform: rotate(90deg);
         }
     }
 
     &__item-content {
         max-height: 0;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
         overflow: hidden;
         transition: all .3s ease-in-out;
+
+        @include breakpoint($mobile-width) {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+        }
     }
 
     &__item-text {

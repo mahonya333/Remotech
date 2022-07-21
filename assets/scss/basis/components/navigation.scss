@@ -1,15 +1,16 @@
 .navigation {
-    @include breakpoint($mobile-width) {
-        display: none;
-    }
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
     
     &__list {
         display: flex;
+        align-items: center;
         gap: 5.3rem;
-    }
 
-    &__list-item {
-
+        @include breakpoint($mobile-width) {
+            display: none;
+        }
     }
 
     &__list-link {

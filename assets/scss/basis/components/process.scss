@@ -3,6 +3,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2.5rem;
+        background-image: url(../../img/process-borders.svg);
+        background-repeat: no-repeat;
 
         @include breakpoint($tablet-width) {
             grid-gap: 1rem;
